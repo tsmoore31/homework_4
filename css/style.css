@@ -40,7 +40,7 @@ nav a:link{
   text-decoration: none;
 }
 
-nav a:hover{
+nav a:hover, nav a:focus{
   text-decoration: underline;
 }
 
@@ -51,8 +51,6 @@ nav a:hover{
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
-
-  /*Your code here*/
   position: absolute;
   top: -40px;
 }
@@ -95,7 +93,6 @@ header{
   background-size: cover;       /* Parallax effect */
   background-attachment: fixed; /* Parallax effect */     
   background-position: center;  /* Parallax effect */
-  
   color: white;
   height: 400px;                /* Parallax effect */
 
@@ -115,7 +112,7 @@ header p{
 }
 
 .about, .method, .clients, .contact{
-  grid-row: 2 / span 1;
+  grid-column: 2 / span 1;
 
 }
 
