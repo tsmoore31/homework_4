@@ -36,6 +36,10 @@ nav a{
 /*Your Code Here*/
 /*Write selector/rule property to add an underline when
 links in the navigation are in the hover or focus state.*/
+nav a:link{
+  text-decoration: none;
+}
+
 nav a:hover{
   text-decoration: underline;
 }
@@ -56,6 +60,7 @@ nav a:hover{
 /*Your Code Here*/
 /*Write selector/rule property to position the skip class element*/
 .skip a:focus{
+  position: absolute;
   top: 0px;
 }
 
@@ -79,17 +84,18 @@ footer{
 }
 
 .container{
-  grid-template-columns: 1fr 5fr 1fr;
   display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
   grid-template-rows: auto auto auto auto auto;
   grid-row-gap: 15px;
 }
 
 header{
-  background-attachment: fixed; /* Parallax effect */     
-  background-position: center;  /* Parallax effect */
   background-repeat: no-repeat; /* Parallax effect */
   background-size: cover;       /* Parallax effect */
+  background-attachment: fixed; /* Parallax effect */     
+  background-position: center;  /* Parallax effect */
+  
   color: white;
   height: 400px;                /* Parallax effect */
 
@@ -98,14 +104,14 @@ header{
   background-image: url(../images/header.jpg);
 
   grid-column: 1 / -1;  /*Can you explain what this does?*/
-  grid-row: 1 / auto;   /*Can you rewrite it?*/
+  grid-row: 1 / span 1;   /*Can you rewrite it?*/
 }
 
 header p{
   color: white;
   font-size: 24px;
-  padding: 0 100px;
-  text-align: center;
+  padding: 0 0px;
+  text-align: left;
 }
 
 .about, .method, .clients, .contact{
@@ -114,9 +120,9 @@ header p{
 }
 
 .about-image, .method-image, .clients-image, .contact-image{
-  overflow: hidden;
   grid-column: 1 / -1;
   max-height: 700px;
+  overflow: hidden;
 
 }
 
@@ -143,6 +149,7 @@ background-color: rgba(255, 255, 255, .8);
   border: 10px solid black;
   padding: 30px;
   align-self: center;
+  margin: auto;
 
 }
 
